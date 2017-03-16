@@ -16,6 +16,7 @@ public class PoengGame extends ApplicationAdapter {
 	
 	// This is a test of the ball
 	private Ball ball;
+
 	
 	@Override
 	public void create () {
@@ -36,12 +37,18 @@ public class PoengGame extends ApplicationAdapter {
 		Gdx.gl.glClearColor(210/255f, 210/255f, 210/255f, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		
+		// run game loop
+		loop();
 		// Draw sprite batch
 		batch.begin();
 		ball.draw(batch);
-		ball.moveRight();
 		batch.end();
 		camera.update();
+	}
+	
+	// game loop
+	public void loop(){
+		ball.moveRight();
 	}
 	
 	@Override

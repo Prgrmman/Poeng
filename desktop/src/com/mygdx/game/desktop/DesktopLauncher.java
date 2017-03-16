@@ -9,7 +9,7 @@ public class DesktopLauncher {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		config.title = "Poeng";
 		config.useGL30 = true;
-		config.width = 1500;
+		config.width = 1250;
 		config.height = 750;
 		config.foregroundFPS = 60;
 		new LwjglApplication(new PoengGame(), config);
