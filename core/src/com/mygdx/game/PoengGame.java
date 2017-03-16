@@ -13,16 +13,16 @@ public class PoengGame extends ApplicationAdapter {
 	private Texture img;
 	private Music bgMusic;
 	private OrthographicCamera camera;
-	private int x;
-	private int y;
+	
+	// This is a test of the ball
+	private Ball ball;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		bgMusic = Gdx.audio.newMusic(Gdx.files.internal("data/bgm.ogg"));
 		img = new Texture(Gdx.files.internal("data/cat.gif"));
-		x = 10;
-		y = 10;
+		ball = new Ball(0,0);
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, 1250, 750);
 		bgMusic.setLooping(true);
@@ -35,11 +35,11 @@ public class PoengGame extends ApplicationAdapter {
 		// Draw Backgound
 		Gdx.gl.glClearColor(210/255f, 210/255f, 210/255f, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		x += 1;
 		
 		// Draw sprite batch
 		batch.begin();
-		batch.draw(img, x, y);
+		ball.draw(batch);
+		ball.moveRight();
 		batch.end();
 		camera.update();
 	}
