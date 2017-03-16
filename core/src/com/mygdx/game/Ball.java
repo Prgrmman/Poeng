@@ -3,7 +3,9 @@ package com.mygdx.game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
+/*
+ * This class represents the ball object that will be present during the game
+ */
 public class Ball {
 	/*
 	 * Fields
@@ -52,5 +54,4 @@ public class Ball {
 	public void draw(SpriteBatch batch){
 		batch.draw(image, x, y);
 	}
-
 }
