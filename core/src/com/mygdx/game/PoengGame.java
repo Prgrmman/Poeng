@@ -13,8 +13,8 @@ public class PoengGame extends ApplicationAdapter {
 	private Texture img;
 	private Music bgMusic;
 	private OrthographicCamera camera;
-	private float x;
-	private float y;
+	private int x;
+	private int y;
 	
 	@Override
 	public void create () {
@@ -35,9 +35,7 @@ public class PoengGame extends ApplicationAdapter {
 		// Draw Backgound
 		Gdx.gl.glClearColor(210/255f, 210/255f, 210/255f, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		x += 5;
-		y += 5;
-		
+		x += 1;
 		
 		// Draw sprite batch
 		batch.begin();
