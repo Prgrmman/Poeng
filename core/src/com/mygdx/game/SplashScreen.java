@@ -44,9 +44,7 @@ public class SplashScreen implements Screen {
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, screenWidth, screenHeight);
 		// This should probably be a different file
-		splashMusic = Gdx.audio.newMusic(Gdx.files.internal("data/bgm.ogg"));
-		splashMusic.setLooping(true);
-		splashMusic.play();
+		splashMusic = Gdx.audio.newMusic(Gdx.files.internal("data/meow.wav"));
 		startTime = TimeUtils.millis();
 		doneFadeIn = false;
 	}
@@ -91,6 +89,8 @@ public class SplashScreen implements Screen {
 		if (Math.abs(alphaLevel -1) >=  0.01)
 			alphaLevel += 0.01;
 		long elapsed = TimeUtils.millis() - startTime;
+		if (Math.abs(elapsed - 1500) <= 50)
+			splashMusic.play();
 		if (elapsed > 4000){
 			doneFadeIn = true;
 			startTime = TimeUtils.millis(); // reset timer
