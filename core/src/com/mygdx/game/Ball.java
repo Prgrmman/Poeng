@@ -46,10 +46,10 @@ public class Ball {
 	 * User methods
 	 */
 	public void moveRight(){
-		x += 5;
+		x += 1;
 	}
 	public void moveLeft(){
-		x -= 5;
+		x -= 1;
 	}
 	
 	public void draw(SpriteBatch batch){

@@ -25,7 +25,7 @@ public class PoengGame extends ApplicationAdapter {
 		img = new Texture(Gdx.files.internal("data/cat.gif"));
 		ball = new Ball(0,0);
 		camera = new OrthographicCamera();
-		camera.setToOrtho(false, 1250, 750);
+		camera.setToOrtho(false, 1600, 900);
 		bgMusic.setLooping(true);
 		bgMusic.play();
 
