@@ -15,6 +15,7 @@ public class PoengGame extends Game {
 	public void create () {
 		batch = new SpriteBatch();
 		// probably not a good idea to start music here
+		// poop
 		this.setScreen((new SplashScreen(this)));
 
 	}
