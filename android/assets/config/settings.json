@@ -1,0 +1,8 @@
+{ "global settings" : {
+	"screen":{
+		"width": 1600,
+		"height": 900
+	},
+	"volume" : 100.0,
+	"fullscreen" : false
+}}
