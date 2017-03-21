@@ -1,11 +1,15 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 
+/*
+ * This class is the menu screen that the player sees after the splash screen
+ */
 public class MenuScreen implements Screen {
 
 	final PoengGame game;
@@ -17,6 +21,7 @@ public class MenuScreen implements Screen {
 	
 	public MenuScreen(final PoengGame game){
 		this.game = game;
+		
 		
 		screenWidth = 1600;
 		screenHeight = 900;
